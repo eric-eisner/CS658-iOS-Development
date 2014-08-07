@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F9R-kC-cxk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zgm-ic-v8c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y0F-QI-xne">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="oeb-24-IEf" appends="YES" id="sNs-PS-rvd"/>
+                                </connections>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter bottom text" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="p5G-ii-Qtt">
+                                <rect key="frame" x="20" y="503" width="280" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="181-Hs-nK7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="z2j-Mu-5or" appends="YES" id="rcG-qa-ASy"/>
+                                </connections>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter top text." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9oI-RE-UGK">
+                                <rect key="frame" x="20" y="20" width="280" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="E1j-RR-RTz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="En9-vE-VSX" appends="YES" id="1xe-xA-xzV"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9oI-RE-UGK" firstAttribute="centerX" secondItem="Y0F-QI-xne" secondAttribute="centerX" id="7HE-k7-wQD"/>
+                            <constraint firstAttribute="bottom" secondItem="p5G-ii-Qtt" secondAttribute="bottom" constant="20" symbolic="YES" id="CI3-FZ-tNX"/>
+                            <constraint firstItem="Y0F-QI-xne" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="M8T-jj-b0P"/>
+                            <constraint firstAttribute="trailing" secondItem="p5G-ii-Qtt" secondAttribute="trailing" constant="20" id="RdA-gv-ShH"/>
+                            <constraint firstItem="9oI-RE-UGK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="Y7K-Oy-keR"/>
+                            <constraint firstItem="p5G-ii-Qtt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="c12-MD-A6h"/>
+                            <constraint firstItem="Zgm-ic-v8c" firstAttribute="top" secondItem="Y0F-QI-xne" secondAttribute="bottom" id="gC0-Oa-Wfn"/>
+                            <constraint firstAttribute="trailing" secondItem="Y0F-QI-xne" secondAttribute="trailing" id="jF5-SQ-QnN"/>
+                            <constraint firstItem="Y0F-QI-xne" firstAttribute="centerX" secondItem="p5G-ii-Qtt" secondAttribute="centerX" id="jcF-Bp-aWN"/>
+                            <constraint firstItem="Y0F-QI-xne" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="kHW-1r-Xkq"/>
+                            <constraint firstItem="9oI-RE-UGK" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" symbolic="YES" id="kZW-qN-qD8"/>
+                            <constraint firstAttribute="trailing" secondItem="9oI-RE-UGK" secondAttribute="trailing" constant="20" id="sl8-Xx-fzd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomText" destination="p5G-ii-Qtt" id="JHY-GQ-1Fr"/>
+                        <outlet property="imageView" destination="Y0F-QI-xne" id="t3J-TD-ELM"/>
+                        <outlet property="topText" destination="9oI-RE-UGK" id="Bvv-AK-qVm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="oeb-24-IEf">
+                    <connections>
+                        <action selector="imageTapped:" destination="vXZ-lx-hvc" id="ANK-x5-BH5"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="z2j-Mu-5or">
+                    <connections>
+                        <action selector="textDragged:" destination="vXZ-lx-hvc" id="Dnm-ax-u08"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="En9-vE-VSX">
+                    <connections>
+                        <action selector="textDragged:" destination="vXZ-lx-hvc" id="yfJ-7e-3m4"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

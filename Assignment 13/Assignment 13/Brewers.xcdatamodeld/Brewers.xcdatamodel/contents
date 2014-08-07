@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="BrewersHeadshot" representedClassName="BrewersHeadshot" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="players" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BrewersPlayer" inverseName="headshot" inverseEntity="BrewersPlayer" syncable="YES"/>
+    </entity>
+    <entity name="BrewersPlayer" representedClassName="BrewersPlayer" isAbstract="YES" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="headshot" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="BrewersHeadshot" inverseName="players" inverseEntity="BrewersHeadshot" syncable="YES"/>
+    </entity>
+    <entity name="Pitcher" representedClassName="Pitcher" parentEntity="BrewersPlayer" syncable="YES">
+        <attribute name="era" optional="YES" transient="YES" attributeType="String" defaultValueString="0.00" syncable="YES"/>
+        <attribute name="k" optional="YES" transient="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="loses" optional="YES" transient="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="saves" optional="YES" transient="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="walks" optional="YES" transient="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="whip" optional="YES" transient="YES" attributeType="String" defaultValueString="0.00" syncable="YES"/>
+        <attribute name="wins" optional="YES" transient="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="PositionPlayer" representedClassName="PositionPlayer" parentEntity="BrewersPlayer" syncable="YES">
+        <attribute name="ab" optional="YES" transient="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="avg" optional="YES" transient="YES" attributeType="String" defaultValueString="0.000" syncable="YES"/>
+        <attribute name="hr" optional="YES" transient="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="r" optional="YES" transient="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="rbi" optional="YES" transient="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="sb" optional="YES" transient="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BrewersHeadshot" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="BrewersPlayer" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Pitcher" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="PositionPlayer" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>
